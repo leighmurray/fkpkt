@@ -22,10 +22,14 @@
 				'x-api-key' => '7R6VqwASR1ZRjiEJdNPbF4RSkaUZy7zmnGHeEWEs'
 			]
 		]);
-				echo "<pre>";
 		$mercuryBody = $mercuryResponse->getBody();
 		$mercuryJson = json_decode($mercuryBody);
-		echo($mercuryJson->content);
+
+		echo $twig->render('base.twig', [
+			'content' => $mercuryJson->content,
+			'metaTitle' => $mercuryJson->title,
+			'title' => $mercuryJson->title
+		]);
 	} else if ($request->request->has('markdown') && $request->request->get('markdown')) {
 		$markdownText = $request->request->get('markdown');
 		$Parsedown = new Parsedown();

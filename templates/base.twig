@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <!-- Required meta tags always come first -->
+	<title>{{ metaTitle }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -13,10 +14,12 @@
 	  <div class="container">
 	        <div class="header clearfix">
 	          
-	          <h3 class="text-muted">FKPKT</h3>
+	          <h1>{{ title|default('FKPKT') }}</h1>
 	        </div>
     {% block body %}
-	
+
+		{{ content|raw }}
+
 	{% endblock body %}
 
 	</div>

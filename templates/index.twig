@@ -1,0 +1,30 @@
+{% extends "base.twig" %}
+
+{% block body %}
+
+
+      <div class="jumbotron">
+		<form method="GET" action="/">
+			<div class="form-group">
+				<label for="url">Url</label>
+				<input id="url" class="form-control" type="text" name="url">
+			</div>
+			<input class="btn" type="submit" value="convert">
+		</form>
+		<hr>
+		<form method="POST" action="/">
+			<div class="form-group">
+				<label for="markdown">Markdown</label>
+				<textarea class="form-control" id="markdown" name="markdown"></textarea>
+			</div>
+			<input class="btn" type="submit" value="convert">
+		</form>
+      </div>
+
+     
+
+      <footer class="footer">
+        <p>&copy; FKPKT {{ "now"|date("Y") }}</p>
+      </footer>
+
+{% endblock body %}

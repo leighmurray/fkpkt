@@ -1,0 +1,8 @@
+{
+    "require": {
+        "symfony/http-foundation": "^3.2",
+        "guzzlehttp/guzzle": "^6.2",
+        "twig/twig": "~1.0",
+        "erusev/parsedown": "^1.6"
+    }
+}
